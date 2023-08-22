@@ -18,8 +18,8 @@ public class TC_001_VerifySuccessfulSignUpWithValidCredentials extends BaseClass
 		
 		SignupPage signuppage = new SignupPage(driver);
 		signuppage.selectCountryCallCode();
-		signuppage.setPhoneNumberInputField("07459374009");
-		signuppage.setFullNameInputField("Oren Edugo");
+		signuppage.setPhoneNumberInputField(resourcebundle.getString("PhoneNumber"));
+		signuppage.setFullNameInputField(resourcebundle.getString("FullName"));
 		signuppage.setPasswordInputField("Enotee8519#");
 		signuppage.clickRegisterButton();
 		
