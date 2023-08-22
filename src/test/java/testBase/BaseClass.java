@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.ResourceBundle;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,10 +17,12 @@ public class BaseClass {
 	public static WebDriver driver;
 	public ChromeOptions ops;
 	public ResourceBundle resourcebundle;
+	public Logger logger;
 	
 	@BeforeClass
 	public void setup() {
 		resourcebundle= ResourceBundle.getBundle("config");
+		logger= LogManager.getLogger(this.getClass());
 		
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\okeog\\OneDrive\\Documents\\Nero Eclipse\\chatdaddy.tech\\drivers\\chromedriver.exe");
