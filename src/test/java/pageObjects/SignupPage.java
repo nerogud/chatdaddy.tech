@@ -84,7 +84,7 @@ public class SignupPage extends BasePage{
 	}
 	public void selectCountryCallCode() {
 		Select callCode = new Select(countryCallCode);
-		callCode.selectByVisibleText("United KIngdom");
+		callCode.selectByVisibleText("United Kingdom");
 	}
 	public void setPhoneNumberInputField(String phonenumber) {
 		phoneNumberInputField.sendKeys(phonenumber);
