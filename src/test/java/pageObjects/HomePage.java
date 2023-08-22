@@ -16,6 +16,9 @@ public class HomePage extends BasePage{
 	@FindBy(css="div[role='button']")
 	WebElement languageOptionDropdownButton;
 	
+	@FindBy(css=".MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.MuiTab-fullWidth.Mui-selected.css-1tqzc0m")
+	WebElement signupButton;
+	
 	public boolean chatdaddyLogoIsDisplayed() {
 		return chatdaddyLogo.isDisplayed();
 	}
@@ -32,6 +35,9 @@ public class HomePage extends BasePage{
 	public void selectEspanolLanguageOption() {
 		Select Language = new Select(languageOptionDropdownButton);
 		Language.selectByIndex(5);;
+	}
+	public void clickSignupButton() {
+		signupButton.click();
 	}
 	
 	
