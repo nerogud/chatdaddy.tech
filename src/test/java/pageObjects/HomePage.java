@@ -19,6 +19,9 @@ public class HomePage extends BasePage{
 	@FindBy(css=".MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.MuiTab-fullWidth.Mui-selected.css-1tqzc0m")
 	WebElement signupButton;
 	
+	@FindBy(css="button[class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary MuiTab-fullWidth css-1tqzc0m']")
+	WebElement loginButton;
+	
 	public boolean chatdaddyLogoIsDisplayed() {
 		return chatdaddyLogo.isDisplayed();
 	}
@@ -36,8 +39,23 @@ public class HomePage extends BasePage{
 		Select Language = new Select(languageOptionDropdownButton);
 		Language.selectByIndex(5);;
 	}
+	public void clickLoginButton() {
+		loginButton.click();
+	}
+	public boolean loginButtonIsEnabled() {
+		return loginButton.isEnabled();
+	}
+	public boolean loginButtonIsDisplayed() {
+		return loginButton.isDisplayed();
+	}
 	public void clickSignupButton() {
 		signupButton.click();
+	}
+	public boolean signupButtonIsDisplayed() {
+		return signupButton.isDisplayed();
+	}
+	public boolean signupButtonIsEnabled() {
+		return signupButton.isEnabled();
 	}
 	
 	
