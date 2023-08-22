@@ -12,11 +12,15 @@ public class TC_001_VerifySuccessfulSignUpWithValidCredentials extends BaseClass
 	
 	@Test
 	public void SignupTestWithValidCredentials() {
+		
+		logger.info("***Start VerifySuccessfulSignUpWithValidCredentials Test***");
 		HomePage homepage = new HomePage(driver);
-		//homepage.selectEnglishLanguageOption();
 		homepage.clickSignupButton();
+		logger.info("***Signup button clicked***");
 		
 		SignupPage signuppage = new SignupPage(driver);
+		
+		logger.info("***Enter user details***");
 		signuppage.selectCountryCallCode();
 		signuppage.setPhoneNumberInputField(resourcebundle.getString("PhoneNumber"));
 		signuppage.setFullNameInputField(resourcebundle.getString("FullName"));
@@ -25,6 +29,7 @@ public class TC_001_VerifySuccessfulSignUpWithValidCredentials extends BaseClass
 		
 		SignupVerificationPage signupverificationpage = new SignupVerificationPage(driver);
 		
+		logger.info("***Assert Test***");
 		Assert.assertTrue(signupverificationpage.confirmVerificationText());
 		
 		
