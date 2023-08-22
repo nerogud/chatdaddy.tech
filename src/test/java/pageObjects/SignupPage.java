@@ -10,12 +10,7 @@ public class SignupPage extends BasePage{
 	public SignupPage(WebDriver driver) {
 		super(driver);
 	}
-	@FindBy(css=".MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.MuiTab-fullWidth.Mui-selected.css-1tqzc0m")
-	WebElement signupButton;
-	
-	@FindBy(css="button[class='MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary MuiTab-fullWidth css-1tqzc0m']")
-	WebElement loginButton;
-	
+		
 	@FindBy(css=".MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.css-1ftxuc4")
 	WebElement signInWithGoogleButton;
 	
@@ -55,24 +50,6 @@ public class SignupPage extends BasePage{
 	@FindBy(css="#password-label")
 	WebElement passwordLabel;
 	
-	public void clickSignupButton() {
-		signupButton.click();
-	}
-	public boolean signupButtonIsDisplayed() {
-		return signupButton.isDisplayed();
-	}
-	public boolean signupButtonIsEnabled() {
-		return signupButton.isEnabled();
-	}
-	public void clickLoginButton() {
-		loginButton.click();
-	}
-	public boolean loginButtonIsEnabled() {
-		return loginButton.isEnabled();
-	}
-	public boolean loginButtonIsDisplayed() {
-		return loginButton.isDisplayed();
-	}
 	public void clickSignInWithGoogleButton() {
 		signInWithGoogleButton.click();
 	}
