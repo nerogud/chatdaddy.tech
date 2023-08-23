@@ -11,9 +11,9 @@ import testBase.BaseClass;
 public class TC_004_VerifyUnsuccessfulSignupWithoutPassword extends BaseClass{
 	
 	@Test
-	public void UnsuccessfulSignupWithoutFullName() {
+	public void UnsuccessfulSignupWithoutPassword() {
 		
-		logger.info("***Start VerifyUnsuccessfulSignupWithoutFullName Test***");
+		logger.info("***Start VerifyUnsuccessfulSignupWithoutPassword Test***");
 		HomePage homepage = new HomePage(driver);
 		homepage.clickSignupButton();
 		logger.info("***Signup button clicked***");
