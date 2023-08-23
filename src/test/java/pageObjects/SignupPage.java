@@ -99,6 +99,9 @@ public class SignupPage extends BasePage{
 	public void clickRegisterButton() {
 		registerButton.click();
 	}
+	public boolean registerButtonIsEnabled() {
+		return registerButton.isEnabled();
+	}
 	public boolean checkPhoneNumberLabelIsDisplayed() {
 		return phoneNumberLabel.isDisplayed();
 	}
